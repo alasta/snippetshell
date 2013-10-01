@@ -1,0 +1,4 @@
+snippetshell
+============
+
+Snippet pour Shell
