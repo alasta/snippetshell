@@ -1,4 +1,6 @@
 snippetshell
 ============
 
-Snippet pour Shell
+!!! Snippet pour Shell !!!
+
+Exemple de bashrc, vimrc, ...
