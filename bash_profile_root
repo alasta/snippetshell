@@ -1,0 +1,18 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin
+
+export PATH
+
+#Personnalisation - On recupere les personnalisations de l utilisateur qui passe root
+PROFILE=`who am i | awk '{print $1}'`
+export PATH PROFILE
+source /home/$PROFILE/.bash_profile
+[ -f /home/$PROFILE/.inputrc ] && bind -f /home/$PROFILE/.inputrc
