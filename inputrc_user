@@ -1,0 +1,8 @@
+#Personnalisation de la completion comme zsh (avec bash_completion installe)
+#set completion-ignore-case on
+set show-all-if-ambiguous on
+set page-completions on
+set show-all-if-unmodified on
+"TAB": complete
+"\C-i": menu-complete
+"\C-j": menu-complete-backward
