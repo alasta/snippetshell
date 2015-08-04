@@ -1,9 +1,0 @@
-#Fonction recuperant les seny SELinux en formattant la date => evite le date -d @1323121321
-function sedenied () {
-        if [ $# -eq 0 ]
-        then
-                grep deni /var/log/audit/audit.log | awk -F'[(:]' '{$2=strftime("(%Y/%m/%d-%Hh%Mm%Ss:",$2); print $0}'
-        else
-                grep deni /var/log/audit/audit.log.$1 | awk -F'[(:]' '{$2=strftime("(%Y/%m/%d-%Hh%Mm%Ss:",$2); print $0}'
-        fi
-}
