@@ -46,3 +46,15 @@ function sedenied () {
                 grep deni /var/log/audit/audit.log.$1 | awk -F'[(:]' '{$2=strftime("(%Y/%m/%d-%Hh%Mm%Ss:",$2); print $0}'
         fi
 }
+
+##Pour powerline
+export PATH=$PATH:~/.local/bin
+#force tmux to 256colors and subshell
+alias tmux="tmux -2"
+
+if [ -f  ~/.local/bin/powerline-daemon ]; then
+        ~/.local/bin/powerline-daemon -q
+        POWERLINE_BASH_CONTINUATION=1
+        POWERLINE_BASH_SELECT=1
+        . ~/.local/lib/python2.6/site-packages/powerline/bindings/bash/powerline.sh
+fi
